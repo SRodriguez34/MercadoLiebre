@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/styles.css">
+    <script src="https://kit.fontawesome.com/2f7fbcc9ff.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div> 
+        <img src="/img/logo-mercado-liebre.svg" alt="Logo" class="logo-mercado-liebre">   
+        <h1 class="titulo">Login</h1> 
+    </div>  
+     
+     <form action="/login" method="POST" class="create-form" onsubmit="return validateForm()">
+        <div class="control-form">
+          <label for="username"></label>
+          <input type="text" placeholder="Nombre de usuario" name="username" id="username" required>
+          <div class="error" id="username-error"></div>
+        </div>
+        <div class="control-form">
+          <label for="password"></label>
+          <input type="password" placeholder="Contraseña" name="password" id="password" required>
+          <div class="error" id="password-error"></div>
+        </div>
+        <button type="submit" class="button">Ingresar</button>
+      </form>    
+      <script>
+          function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var isValid = true;
+  
+            
+          if (username.length < 2) {
+            document.getElementById("username-error").textContent = "El nombre de usuario debe tener al menos 2 caracteres.";
+            isValid = false;
+          } else {
+            document.getElementById("username-error").textContent = "";
+          }
+  
+          
+          if (password.length < 8) {
+            document.getElementById("password-error").textContent = "La contraseña debe tener al menos 8 caracteres.";
+            isValid = false;
+          } else {
+            document.getElementById("password-error").textContent = "";
+          }
+  
+          return isValid;
+        }
+      </script>
+</body>
+</html>

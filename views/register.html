@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/CSS/styles.css">
+  <title>Registro de Usuario</title>
+</head>
+<body>
+  <div> 
+    <img src="/img/logo-mercado-liebre.svg" alt="Logo" class="logo-mercado-liebre">   
+    <h1 class="titulo">Registro de Usuario</h1> 
+  </div>  
+    
+  <form action="index.html" method="post" class="register">
+    <label for="nombre"></label>
+    <input type="text" placeholder="Nombre y Apellido" name="nombre" required class="control" ><br>
+    
+    <label for="usuario"></label>
+    <input type="text" placeholder="Nombre de usuari@" name="usuario" required class="control"><br>
+
+    <label for="usuario"></label>
+    <input type="email" placeholder="email" name="usuario" required class="control"><br>
+    
+    <label for="fecha-nacimiento"></label>
+    <input type="date" placeholder="Fecha de Nacimiento" name="fecha-nacimiento" required class="control"><br>
+    
+    <label for="domicilio"></label>
+    <input type="text" placeholder="Domicilio:" name="domicilio" required class="control"><br>
+    
+    <label for="perfil">Perfil del Usuario</label>
+    <select id="perfil" name="perfil" class="control">
+      <option value="comprar">Comprar</option>
+      <option value="vender">Vender</option>
+    </select><br>
+    
+    <label for="categorias">Categorías de Interés</label>
+    <input type="checkbox" name="categorias" value="electro">
+    <label for="electro">Electro</label>
+    <input type="checkbox" name="categorias" value="moda">
+    <label for="moda">Moda</label>
+    <input type="checkbox" name="categorias" value="hogar">
+    <label for="hogar">Hogar</label>
+    <input type="checkbox" name="categorias" value="jugueteria">
+    <label for="jugueteria">Juguetería</label>
+    <input type="checkbox" name="categorias" value="vida-sana">
+    <label for="vida-sana">Vida Sana</label><br>
+    
+    <label for="foto">Foto de Usuario</label>
+    <input type="file" name="foto" class="control"><br>
+    
+    <label for="password"></label>
+    <input type="password" placeholder="Contraseña" name="password" required class="control"><br>
+    
+    <label for="confirm-password"></label>
+    <input type="password" placeholder="Confirmar Contraseña" name="confirm-password" required class="control"><br>
+    
+    <div class="button-container">
+      <button type="submit">Enviar</button>
+      <button type="reset">Borrar</button>
+    </div>
+
+  </form>
+</body>
+</html>
